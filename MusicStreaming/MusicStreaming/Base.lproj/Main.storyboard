@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music Streaming View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MusicStreamingViewController" customModule="MusicStreaming" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg" translatesAutoresizingMaskIntoConstraints="NO" id="UJP-Ct-Nuf" userLabel="bkg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="albumArt" translatesAutoresizingMaskIntoConstraints="NO" id="gs0-Eo-PEo" userLabel="genreImage">
+                                <rect key="frame" x="16" y="20" width="343" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="272" id="zTI-gX-U99"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1d-Md-CgI" userLabel="Play">
+                                <rect key="frame" x="142.5" y="337" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IiX-Ue-vn4"/>
+                                    <constraint firstAttribute="width" constant="30" id="MDJ-bJ-AiM"/>
+                                </constraints>
+                                <state key="normal" image="btn-play"/>
+                                <connections>
+                                    <action selector="playBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VSu-f0-yOR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVX-gI-Fsh" userLabel="stationDesc" customClass="MarqueeLabel">
+                                <rect key="frame" x="72" y="297" width="230" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eKH-gn-Zea"/>
+                                    <constraint firstAttribute="width" constant="230" id="yUd-Sn-RAf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scrollDuration">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rate">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-on-Pg4">
+                                <rect key="frame" x="16" y="387" width="343" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stationTableViewCell" rowHeight="100" id="4mz-RA-myn" customClass="StationTableViewCell" customModule="MusicStreaming" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4mz-RA-myn" id="44S-Ls-kAT">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6oQ-NI-3mc" userLabel="cellBkg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="99.5"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-station" translatesAutoresizingMaskIntoConstraints="NO" id="cwG-bc-AyH" userLabel="StationImage">
+                                                    <rect key="frame" x="5" y="30" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="FZa-HF-Xa1"/>
+                                                        <constraint firstAttribute="width" constant="40" id="fJV-tH-DbY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTn-wM-p0X" userLabel="StationLabel">
+                                                    <rect key="frame" x="50" y="30" width="280" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="xrA-5h-DZ8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="cwG-bc-AyH" firstAttribute="leading" secondItem="44S-Ls-kAT" secondAttribute="leading" constant="5" id="1Fa-bo-VP5"/>
+                                                <constraint firstItem="jTn-wM-p0X" firstAttribute="centerY" secondItem="44S-Ls-kAT" secondAttribute="centerY" id="1VU-Tz-1O4"/>
+                                                <constraint firstItem="6oQ-NI-3mc" firstAttribute="top" secondItem="44S-Ls-kAT" secondAttribute="top" id="5Q9-Lg-jqK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jTn-wM-p0X" secondAttribute="trailing" constant="5" id="JGl-QE-prP"/>
+                                                <constraint firstAttribute="trailing" secondItem="6oQ-NI-3mc" secondAttribute="trailing" id="TWm-Td-3z4"/>
+                                                <constraint firstItem="cwG-bc-AyH" firstAttribute="centerY" secondItem="44S-Ls-kAT" secondAttribute="centerY" id="ZH7-n6-npI"/>
+                                                <constraint firstAttribute="bottom" secondItem="6oQ-NI-3mc" secondAttribute="bottom" id="b7l-G5-xTu"/>
+                                                <constraint firstItem="6oQ-NI-3mc" firstAttribute="leading" secondItem="44S-Ls-kAT" secondAttribute="leading" id="nCD-pj-IUb"/>
+                                                <constraint firstItem="jTn-wM-p0X" firstAttribute="leading" secondItem="cwG-bc-AyH" secondAttribute="trailing" constant="5" id="pEu-vQ-p8Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="cellBkg" destination="6oQ-NI-3mc" id="sBA-Bt-8LD"/>
+                                            <outlet property="stationImage" destination="cwG-bc-AyH" id="Sv7-5S-hZA"/>
+                                            <outlet property="stationLabel" destination="jTn-wM-p0X" id="lZN-2J-5IC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FaN-vc-A4L"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sdL-mA-RQc"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UX-ID-hWn" userLabel="Pause">
+                                <rect key="frame" x="202.5" y="337" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="18N-M4-KiX"/>
+                                    <constraint firstAttribute="width" constant="30" id="Vgg-DH-NBO"/>
+                                </constraints>
+                                <state key="normal" image="btn-pause"/>
+                                <connections>
+                                    <action selector="pauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWr-Fg-Ly2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gk6-on-Pg4" secondAttribute="bottom" constant="20" id="9M3-BS-c4q"/>
+                            <constraint firstItem="gs0-Eo-PEo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BCE-oT-Kcw"/>
+                            <constraint firstItem="gk6-on-Pg4" firstAttribute="top" secondItem="9UX-ID-hWn" secondAttribute="bottom" constant="20" id="C91-nn-gbg"/>
+                            <constraint firstItem="z1d-Md-CgI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="Lo5-fC-91m"/>
+                            <constraint firstItem="9UX-ID-hWn" firstAttribute="top" secondItem="EVX-gI-Fsh" secondAttribute="bottom" constant="10" id="Spl-kh-ICv"/>
+                            <constraint firstItem="gs0-Eo-PEo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X1j-zz-bl9"/>
+                            <constraint firstItem="UJP-Ct-Nuf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fRv-sc-j9g"/>
+                            <constraint firstItem="9UX-ID-hWn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="30" id="fqm-zs-VDK"/>
+                            <constraint firstItem="gk6-on-Pg4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nWv-cF-tny"/>
+                            <constraint firstAttribute="trailing" secondItem="UJP-Ct-Nuf" secondAttribute="trailing" id="ofq-Ht-067"/>
+                            <constraint firstItem="gs0-Eo-PEo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pwy-76-muo"/>
+                            <constraint firstItem="z1d-Md-CgI" firstAttribute="top" secondItem="EVX-gI-Fsh" secondAttribute="bottom" constant="10" id="qkr-Jt-28z"/>
+                            <constraint firstItem="gk6-on-Pg4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qwK-UA-ZKw"/>
+                            <constraint firstItem="EVX-gI-Fsh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkY-rN-6kG"/>
+                            <constraint firstItem="EVX-gI-Fsh" firstAttribute="top" secondItem="gs0-Eo-PEo" secondAttribute="bottom" constant="5" id="rmb-DB-awY"/>
+                            <constraint firstAttribute="bottom" secondItem="UJP-Ct-Nuf" secondAttribute="bottom" id="yal-qT-Piv"/>
+                            <constraint firstItem="UJP-Ct-Nuf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zLk-Ni-Trg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="genreImage" destination="gs0-Eo-PEo" id="7VZ-xC-BfN"/>
+                        <outlet property="stationDesc" destination="EVX-gI-Fsh" id="cLL-Yt-FNG"/>
+                        <outlet property="tableView" destination="gk6-on-Pg4" id="5SD-nK-8zo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="albumArt" width="180" height="180"/>
+        <image name="bkg" width="750" height="1334"/>
+        <image name="btn-pause" width="44" height="44"/>
+        <image name="btn-play" width="44" height="44"/>
+        <image name="default-station" width="40" height="40"/>
+    </resources>
+</document>

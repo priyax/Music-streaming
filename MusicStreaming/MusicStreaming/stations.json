@@ -1,0 +1,53 @@
+{ "station":
+    [
+     {
+     "name": "Sub Pop Radio",
+     "streamURL": "http://djboyradio.streamguys1.com/sub-pop-records.mp3",
+     "imageURL": "station-sub",
+     "desc": "Midsized Record Label",
+     "longDesc": "Sub Pop is a record label founded in 1986 by Bruce Pavitt. In 1988, Sub Pop Records LLC was formed by Bruce Pavitt and Jonathan Poneman in Seattle, Washington. Sub Pop achieved fame in the late 1980s for first signing Nirvana, Soundgarden, Mudhoney and many other bands from the Seattle alternative rock scene."
+     },
+     {
+     "name": "Sounds of the 80s",
+     "streamURL": "http://listen.radionomy.com:80/1HITS80s",
+     "imageURL": "station-80s",
+     "desc": "Totally Rad",
+     "longDesc": "80s Baby! The '80s is not about nostalgia; it is about a decade of people, decisions and inventions that changed our future, told from the perspective of unknowing history makers who lived these iconic moments."
+     },
+     {
+     "name": "Classic Rock",
+     "streamURL": "http://rfcmedia.streamguys1.com/classicrock.mp3",
+     "imageURL": "station-classicrock",
+     "desc": "Classic Rock Hits",
+     "longDesc": "Classic rock is a radio format which developed from the album-oriented rock (AOR) format in the early 1980s. In the United States, the classic rock format features music ranging generally from the late 1960s to the late 1980s, primarily focusing on commercially successful hard rock popularized in the 1970s. The radio format became increasingly popular with the baby boomer demographic by the end of the 1990s."
+     },
+    {
+     "name": "Desi Bhangra Music",
+     "streamURL": "http://78.223.184.184:8000/test.aac",
+     "imageURL": "",
+     "desc": "Paris Desi Musci",
+     "longDesc": "Desi music encompasses a station which caters to Indians yearing for the Indian rhythms of their homeland."
+     },
+     {
+     "name": "Desi Radio Hits",
+     "streamURL": "http://149.56.100.171:8823/stream",
+     "imageURL": "",
+     "desc": "Paris Desi Musci",
+     "longDesc": "Desi music encompasses a station which caters to Indians yearing for the Indian rhythms of their homeland."
+     },
+     {
+     "name": "Club Music",
+     "streamURL": "http://streaming.radionomy.com/Elium-ClubDance",
+     "imageURL": "",
+     "desc": "Club Music",
+     "longDesc": "Club Music is the bomb."
+     },
+     {
+     "name": "Talk Show",
+     "streamURL": "http://wxtk-fm.akacast.akamaistream.net/7/197/320838/v1/auth.akacast.akamaistream.net/wxtk-fm",
+     "imageURL": "",
+     "desc": "Talk shows",
+     "longDesc": "Talk shows are boring."
+     }
+    ]
+}

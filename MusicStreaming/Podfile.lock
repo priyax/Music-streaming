@@ -1,0 +1,17 @@
+PODS:
+  - MarqueeLabel (3.0.1):
+    - MarqueeLabel/ObjC (= 3.0.1)
+  - MarqueeLabel/ObjC (3.0.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - MarqueeLabel (~> 3.0)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  MarqueeLabel: 80ba85d2b76a9f5fa6c13de337db80bcd94feb1d
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: d914c8748518a25e00cb6f64bfbfcad0f951b621
+
+COCOAPODS: 1.2.1.beta.1
